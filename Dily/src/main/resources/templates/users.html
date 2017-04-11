@@ -1,0 +1,16 @@
+<html >
+    <head>
+    </head>
+    <body>
+        <h3>Welcome, Enter The Employee Details</h3>
+        <table>
+            <tr data-th-each ="user : ${users}">
+                <td data-th-text="${user.name}"></td>
+                <td data-th-text="${user.username}"></td>
+                <td data-th-text="${user.email}"></td>
+                <td data-th-text="${user.password}"></td>
+                <td data-th-text="${user.dateOfBirth}"></td>
+            </tr>
+        </table>
+    </body>
+</html>
