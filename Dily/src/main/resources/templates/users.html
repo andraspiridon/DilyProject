@@ -1,16 +1,41 @@
-<html >
-    <head>
-    </head>
-    <body>
-        <h3>Welcome, Enter The Employee Details</h3>
+<html xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorator="layout">
+<div layout:fragment ="content">
+    <a class="btn btn-primary" href="/users/new">Add user</a>
+        <h3>All users: </h3>
         <table>
+            <thead>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Username</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td>Date of birth</td>
+            </thead>
             <tr data-th-each ="user : ${users}">
+                <td data-th-text="${user.user_id}"></td>
                 <td data-th-text="${user.name}"></td>
                 <td data-th-text="${user.username}"></td>
                 <td data-th-text="${user.email}"></td>
                 <td data-th-text="${user.password}"></td>
                 <td data-th-text="${user.dateOfBirth}"></td>
+                <td>
+                    <a th:href="@{'/users/{user_id}/delete'(user_id=${user.user_id})}" class="delete" th:attr="name=${user.name}">
+                        <span class="fa-stack">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </span>
+                    </a>
+                </td>
+                <td>
+                    <a th:href="@{'/users/{user_id}/edit'(user_id=${user.user_id})}" class="edit" th:attr="name=${user.name}">
+                    <span class="fa-stack">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </span>
+
+                    </a>
+                </td>
             </tr>
         </table>
-    </body>
+</div>
 </html>
