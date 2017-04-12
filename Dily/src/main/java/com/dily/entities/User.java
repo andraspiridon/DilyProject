@@ -1,5 +1,7 @@
 package com.dily.entities;
 
+import oracle.sql.DATE;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -17,12 +19,12 @@ public class User {
     private String username;
     private String password;
     private String email;
-    private Date dateOfBirth;
+    private java.sql.Date dateOfBirth;
 
     public User(){
 
     }
-    public User(int user_id, String name, String username, String password, String email, Date dateOfBirth) {
+    public User(int user_id, String name, String username, String password, String email, java.sql.Date dateOfBirth) {
         this.user_id = user_id;
         this.name = name;
         this.username = username;
@@ -71,11 +73,11 @@ public class User {
         this.email = email;
     }
 
-    public Date getDateOfBirth() {
+    public java.sql.Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(java.sql.Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 }

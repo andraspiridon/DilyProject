@@ -12,10 +12,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 
 /**
@@ -61,8 +63,17 @@ public class UserControler {
                                @RequestParam("username") String username,
                                @RequestParam("password") String password,
                                @RequestParam("email") String email,
-                               @RequestParam("dateOfBirth") Date dateOfBirth) {
-        repository.save(new User(id,name,username,password,email,dateOfBirth));
+                               @RequestParam("dateOfBirth") String dateOfBirth) {
+        DateFormat format = new SimpleDateFormat("YYYY-MM-DD", Locale.ENGLISH);
+        Date date = null;
+        try {
+            date = format.parse(dateOfBirth);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+
+        repository.save(new User(id,name,username,password,email,sqlDate));
         return new ModelAndView("redirect:/users/getAllUsers");
     }
 
@@ -72,17 +83,26 @@ public class UserControler {
                                @RequestParam("username") String username,
                                @RequestParam("password") String password,
                                @RequestParam("email") String email,
-                               @RequestParam("dateOfBirth")java.sql.Date dateOfBirth
+                               @RequestParam("dateOfBirth") String dateOfBirth
                                ) {
+        DateFormat format = new SimpleDateFormat("YYYY-MM-DD", Locale.ENGLISH);
+        Date date = null;
+        try {
+            date = format.parse(dateOfBirth);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+
         User user= repository.findOne(id);
-        user.setUser_id(id);
+        //user.setUser_id(id);
         user.setName(name);
         user.setUsername(username);
         user.setPassword(password);
         user.setEmail(email);
-        user.setDateOfBirth(dateOfBirth);
+        user.setDateOfBirth(sqlDate);
         repository.save(user);
-        return new ModelAndView("redirect:users/getAllUsers");
+        return new ModelAndView("redirect:/users/getAllUsers");
     }
 
     @RequestMapping(value = "/{id}/edit", method = RequestMethod.GET)

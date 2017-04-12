@@ -2,8 +2,7 @@
 <div layout:fragment="content">
     <form method="post" name="comment_form" id="comment_form" action="/users/update" role="form">
         <div class="form-group">
-            <label for="user_id">Id</label>
-            <input type="number" class="form-control" id="user_id" name="user_id" th:text="${user.user_id}"/>
+
 
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" name="name" th:text="${user.name}"/>
