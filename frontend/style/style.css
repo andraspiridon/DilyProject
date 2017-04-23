@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  font-weight: normal;
+  color: #34495e; }
+
 body {
   margin: 0;
   padding: 0; }
@@ -90,7 +98,9 @@ nav {
   text-align: center;
   background-color: #222;
   z-index: 2;
-  opacity: .9; }
+  opacity: .9;
+  display: flex;
+  justify-content: space-between; }
 
 .home-link a {
   float: left;
@@ -362,7 +372,7 @@ input {
   border-radius: 5px; }
 
 input:focus, textarea:focus {
-  background-color: #404040;
+  background-color: #fafafa;
   outline: none;
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
@@ -370,7 +380,7 @@ input:focus, textarea:focus {
   -o-transition-duration: 0.5s; }
 
 input:hover, textarea:hover {
-  background-color: #404040;
+  background-color: #fafafa;
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
@@ -378,8 +388,8 @@ input:hover, textarea:hover {
 
 button {
   border-radius: 5px;
-  font: small-caps 700 20px 'Lato';
-  width: 150px;
+  /*font: small-caps 700 20px 'Lato';*/
+  width: 100px;
   padding-bottom: 5px;
   background-color: #404040;
   color: #FFF; }
@@ -405,5 +415,144 @@ button:hover {
   margin-bottom: 5px;
   color: #E8E8E8;
   letter-spacing: 1px; }
+
+.custom-button {
+  border-radius: 4px;
+  width: 90px;
+  font-size: 18px;
+  height: 33px;
+  margin-right: 10px;
+  border: none;
+  font: small-caps 18px 'Lato', sans-serif; }
+
+.header-buttons {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.menu {
+  padding: 0;
+  margin: 0; }
+
+.bg-color {
+  background-color: #CDDC39;
+  transition-duration: .5s; }
+
+.text-color {
+  color: #CDDC39;
+  transition-duration: .5s; }
+
+.wrapper {
+  min-width: 600px;
+  max-width: 900px;
+  margin: 0; }
+
+.tabs {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  padding: 0px;
+  margin: 0px;
+  background-color: #CDDC39;
+  border-radius: 5px; }
+  .tabs > li {
+    transition-duration: .25s;
+    display: table-cell;
+    list-style: none;
+    text-align: center;
+    padding: 20px 20px 25px 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: #34495e; }
+    .tabs > li:before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 120%;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.3);
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+      transition-duration: .25s;
+      border-radius: 5px 5px 0 0; }
+    .tabs > li:hover:before {
+      -webkit-transform: translateY(70%);
+      transform: translateY(70%); }
+    .tabs > li.active {
+      color: #34495e;
+      background-color: #fafafa;
+      border-radius: 5px; }
+      .tabs > li.active:before {
+        transition-duration: .5s;
+        background-color: #fafafa;
+        -webkit-transform: translateY(0);
+        transform: translateY(0); }
+
+.tab__content {
+  background-color: #fafafa;
+  position: relative;
+  width: 100%;
+  border-radius: 5px; }
+  .tab__content > li {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    list-style: none; }
+    .tab__content > li .content__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-radius: 5px;
+      width: 100%;
+      padding: 20px 40px 40px 20px;
+      background-color: #fafafa; }
+
+.content__wrapper h2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: 300; }
+.content__wrapper .custom-button {
+  background-color: #2196F3;
+  font-family: 'Roboto';
+  width: 163px; }
+
+.modal-dialog {
+  width: 50%;
+  height: 80%; }
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  background: transparent;
+  box-shadow: none;
+  border: none; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+
+.custom-input {
+  display: flex;
+  padding-bottom: 15px; }
+
+label {
+  padding-right: 15px;
+  color: #34495e; }
+
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
