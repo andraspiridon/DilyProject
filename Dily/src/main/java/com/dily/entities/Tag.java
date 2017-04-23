@@ -11,27 +11,30 @@ import javax.persistence.Table;
 @Table(name = "tag")
 public class Tag {
     @Id
-    private int tagId;
-    private String tagName;
+    private int tag_id;
+    private String tag_name;
 
-    public Tag(int tagId, String tagName) {
-        this.tagId = tagId;
-        this.tagName = tagName;
+    public Tag() {
     }
 
-    public int getTagId() {
-        return tagId;
+    public Tag(int tag_id, String tag_name) {
+        this.tag_id = tag_id;
+        this.tag_name = tag_name;
     }
 
-    public void setTagId(int tagId) {
-        this.tagId = tagId;
+    public int getTag_id() {
+        return tag_id;
     }
 
-    public String getTagName() {
-        return tagName;
+    public void setTag_id(int tag_id) {
+        this.tag_id = tag_id;
     }
 
-    public void setTagName(String tagName) {
-        this.tagName = tagName;
+    public String getTag_name() {
+        return tag_name;
+    }
+
+    public void setTag_name(String tag_name) {
+        this.tag_name = tag_name;
     }
 }
