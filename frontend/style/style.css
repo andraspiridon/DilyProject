@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 * {
   box-sizing: border-box;
   margin: 0;
@@ -506,7 +507,7 @@ button:hover {
     left: 0;
     display: none;
     list-style: none; }
-    .tab__content > li .content__wrapper {
+    .tab__content > li .content__wrapper:first-child {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -515,6 +516,46 @@ button:hover {
       width: 100%;
       padding: 20px 40px 40px 20px;
       background-color: #fafafa; }
+  .tab__content .content-wrapper-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fafafa; }
+    .tab__content .content-wrapper-signup .input-pair {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      justify-content: space-between;
+      width: 100%; }
+    .tab__content .content-wrapper-signup .custom-input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%; }
+    .tab__content .content-wrapper-signup form {
+      width: 100%; }
+    .tab__content .content-wrapper-signup .custom-button {
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      outline: 0;
+      background: #4CAF50;
+      width: 100%;
+      height: 50px;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer; }
+    .tab__content .content-wrapper-signup input {
+      width: 95%; }
 
 .content__wrapper h2 {
   width: 100%;
@@ -522,9 +563,19 @@ button:hover {
   padding-bottom: 20px;
   font-weight: 300; }
 .content__wrapper .custom-button {
-  background-color: #2196F3;
-  font-family: 'Roboto';
-  width: 163px; }
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer; }
 
 .modal-dialog {
   width: 50%;
@@ -543,15 +594,33 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  width: 80%; }
 
 .custom-input {
   display: flex;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  width: 100%; }
 
 label {
   padding-right: 15px;
   color: #34495e; }
+
+input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #EEEEEE;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px; }
+
+.large-input {
+  width: 98% !important;
+  height: 50px;
+  padding: 15px; }
 
 /*# sourceMappingURL=style.css.map */
 
