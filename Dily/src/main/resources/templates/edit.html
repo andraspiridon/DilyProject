@@ -5,18 +5,18 @@
 
 
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" th:text="${user.name}"/>
+            <input required="true" type="text" class="form-control" id="name" name="name" th:text="${user.name}"/>
 
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" th:text="${user.username}"/>
+            <input required="true" type="text" class="form-control" id="username" name="username" th:text="${user.username}"/>
 
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" th:text="${user.password}"/>
+            <input required="true" type="password" class="form-control" id="password" name="password" th:text="${user.password}"/>
 
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" name="email" th:text="${user.email}"/>
+            <input required="true" type="text" class="form-control" id="email" name="email" th:text="${user.email}"/>
             <label for="dateOfBirth">Date of Birth</label>
-            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" th:text="${user.dateOfBirth}"/>
+            <input required="true" type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" th:text="${user.dateOfBirth}"/>
 
         </div>
         <input type="hidden" id="userid" rows="5" class="form-control" name="user_id" th:value="${user.user_id}"/>

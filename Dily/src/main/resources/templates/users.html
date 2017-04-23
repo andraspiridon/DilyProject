@@ -3,6 +3,36 @@
       layout:decorator="layout">
 <div layout:fragment ="content">
     <a class="btn btn-primary" href="/users/new">Add user</a>
+    <a class="btn btn-primary" href="/users/1/descSortId">Sort descendent by id</a>
+    <a class="btn btn-primary" href="/users/1/ascSortId">Sort ascendent by id</a>
+    <a class="btn btn-primary" href="/users/1/descSortName">Sort descendent by name</a>
+    <a class="btn btn-primary" href="/users/1/ascSortName">Sort ascendent by name</a>
+    <a class="btn btn-primary" href="/users/1/descSortDate">Sort descendent by date</a>
+    <a class="btn btn-primary" href="/users/1/ascSortDate">Sort ascendent by date</a>
+    <a class="btn btn-primary" href="/users/filterName">Filter by name</a>
+    <a class="btn btn-primary" href="/users/filterId">Filter by id</a>
+    <a class="btn btn-primary" href="/users/birthdayToday">See Birthday today</a>
+    <a class="btn btn-primary" href="/users/relatives">Find possible relatives!</a>
+   <!-- <a class="btn btn-primary" href="/users/filterDate">Filter by date</a> -->
+
+
+
+    <ul class="pagination">
+        <li><a href="/users/1/allUsers">1</a></li>
+        <li><a  href="/users/2/allUsers">2</a></li>
+        <li><a href="/users/3/allUsers">3</a></li>
+        <li><a href="/users/4/allUsers">4</a></li>
+        <li><a href="/users/5/allUsers">5</a></li>
+        <li><a href="/users/6/allUsers">6</a></li>
+        <li><a href="/users/7/allUsers">7</a></li>
+        <li><a href="/users/8/allUsers">8</a></li>
+        <li><a href="/users/9/allUsers">9</a></li>
+        <li><a href="/users/10/allUsers">10</a></li>
+        <li><a href="/users/11/allUsers">11</a></li>
+        <li><a href="/users/12/allUsers">12</a></li>
+        <li><a href="/users/13/allUsers">13</a></li>
+
+    </ul>
         <h3>All users: </h3>
         <table>
             <thead>
@@ -12,6 +42,8 @@
             <td>Email</td>
             <td>Password</td>
             <td>Date of birth</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             </thead>
             <tr data-th-each ="user : ${users}">
                 <td data-th-text="${user.user_id}"></td>
