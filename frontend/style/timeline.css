@@ -1,219 +1,39 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto';
-  font-weight: normal;
-  color: #34495e; }
+/*
+Error: Invalid CSS after "}": expected selector or at-rule, was "}"
+        on line 276 of timeline.scss
 
-body {
-  width: 100%;
-  height: 100%;
+271: 
+272:     &.expand {
+273:         width: 95%;
+274:     }
+275: }
+276: }
+277: 
+278:  .profile-picture {
+279:         width: 150px;
+280:         height: 150px;
+281:         border-radius: 100%;
 
-
-input {
-  box-shadow: none;
-  outline: none;
-  border: 1px solid #fafafa; 
-}
-
-
-.main-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: row; }
-
-.custom-button {
-  width: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border-radius: 4px; }
-  .custom-button:hover {
-    cursor: pointer; }
-
-.profile-picture {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  background: url("images/profile.jpg");
-  background-position: center;
-  background-size: 150px auto;
-  background-repeat: no-repeat; }
-
-.left-container {
-  width: 20%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #CDDC39;
-  transition: width .3s;
-  -webkit-transition: width .3s; }
-  .left-container .left-inside {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .left-container .left-inside i {
-      color: #34495e;
-      margin-right: 5px; }
-    .left-container .left-inside.hide {
-      display: none; }
-  .left-container .hided-inside {
-    display: none; }
-    .left-container .hided-inside .profile-picture {
-      width: 35px;
-      height: 35px;
-      background-size: 35px auto; }
-    .left-container .hided-inside li i {
-      margin-bottom: 10px;
-      font-size: 20px; }
-    .left-container .hided-inside li:first-child i {
-      color: #fff; }
-    .left-container .hided-inside.show {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-  .left-container.shrink {
-    width: 5%;
-    transition: width .3s;
-    -webkit-transition: width .3s; }
-  .left-container .icon-container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px; }
-    .left-container .icon-container i {
-      font-size: 25px;
-      color: #fff; }
-      .left-container .icon-container i:hover {
-        cursor: pointer; }
-      .left-container .icon-container i.rotate {
-        transform: rotate(180deg); }
-  .left-container h2 {
-    font-family: 'Roboto';
-    font-weight: 200;
-    padding-top: 10px; }
-  .left-container .action-list {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column; }
-    .left-container .action-list li {
-      width: 50%;
-      display: flex;
-      justify-content: space-between;
-      margin: 5px 0 5px 0; }
-      .left-container .action-list li:hover {
-        cursor: pointer; }
-      .left-container .action-list li a {
-        width: calc("50%-25px");
-        text-align: left; }
-  .left-container .custom-button {
-    font-size: 15px;
-    margin-top: 20px;
-    background-color: #fff;
-    color: #95a5a6; }
-    .left-container .custom-button:hover {
-      background-color: #fafafa; }
-  .left-container.hide {
-    display: none; }
-
-.right-container {
-  width: 80%;
-  height: 100%;
-  background-color: #fafafa;
-  overflow-x: auto; }
-  .right-container header {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px 0 30px;
-    background-color: #fafafa;
-    box-shadow: 3px 1px 10px 0 rgba(0, 0, 0, 0.15); }
-    .right-container header i {
-      color: #95a5a6; }
-      .right-container header i:hover {
-        cursor: pointer; }
-    .right-container header .custom-notification .counter {
-      position: absolute;
-      background-color: #CDDC39;
-      border-radius: 12px;
-      padding: 1px 5px;
-      font-size: 10px;
-      top: 15px;
-      right: 27px; }
-    .right-container header .custom-notification .fa-bell-o {
-      font-size: 20px;
-      position: relative; }
-    .right-container header .custom-notification .notification-dropdown {
-      display: none;
-      width: 200px;
-      position: absolute;
-      top: 57px;
-      right: 21px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px; }
-      .right-container header .custom-notification .notification-dropdown.show {
-        display: block; }
-      .right-container header .custom-notification .notification-dropdown .notification-header {
-        display: flex;
-        height: 35px;
-        justify-content: center;
-        align-items: center;
-        background-color: #CDDC39;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px; }
-      .right-container header .custom-notification .notification-dropdown .notification-counter {
-        background-color: #fff;
-        border-radius: 12px;
-        padding: 1px 5px;
-        font-size: 10px;
-        margin-left: 10px; }
-      .right-container header .custom-notification .notification-dropdown .triangle {
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid #CDDC39;
-        position: absolute;
-        top: -10px;
-        right: 22px; }
-      .right-container header .custom-notification .notification-dropdown .notification-body {
-        background-color: #fff; }
-      .right-container header .custom-notification .notification-dropdown .notification-row {
-        padding: 10px 5px 10px 5px; }
-        .right-container header .custom-notification .notification-dropdown .notification-row h6 {
-          color: #7f8c8d; }
-        .right-container header .custom-notification .notification-dropdown .notification-row h5 {
-          color: #4CAF50; }
-        .right-container header .custom-notification .notification-dropdown .notification-row:not(:last-child) {
-          border-bottom: 1px solid #95a5a6; }
-    .right-container header .logo h1 {
-      font-size: 20px;
-      font-weight: 100;
-      color: #CDDC39; }
-    .right-container header .search-input {
-      display: none;
-      width: 88%;
-      height: 35px;
-      margin-left: 10px;
-      padding-left: 10px;
-      background-color: #fafafa;
-      border-radius: 4px;
-      transition: width .3s;
-      -webkit-transition: width .3s; }
-      .right-container header .search-input.show {
-        display: block; }
-  .right-container.expand {
-    width: 95%; }
-
-/*# sourceMappingURL=timeline.css.map */
+Backtrace:
+timeline.scss:276
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:42:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"}\": expected selector or at-rule, was \"}\"\A         on line 276 of timeline.scss\A \A 271: \A 272:     &.expand {\A 273:         width: 95%;\A 274:     }\A 275: }\A 276: }\A 277: \A 278:  .profile-picture {\A 279:         width: 150px;\A 280:         height: 150px;\A 281:         border-radius: 100%;"; }
