@@ -5,7 +5,7 @@
   padding: 0;
   font-family: 'Roboto';
   font-weight: normal;
-  color: #34495e; }
+  color: #00897B; }
 
 body {
   margin: 0;
@@ -437,11 +437,11 @@ button:hover {
   margin: 0; }
 
 .bg-color {
-  background-color: #CDDC39;
+  background-color: #00897B;
   transition-duration: .5s; }
 
 .text-color {
-  color: #CDDC39;
+  color: #00897B;
   transition-duration: .5s; }
 
 .wrapper {
@@ -457,7 +457,7 @@ button:hover {
   transform: translateY(5px);
   padding: 0px;
   margin: 0px;
-  background-color: #CDDC39;
+  background-color: #00897B;
   border-radius: 5px; }
   .tabs > li {
     transition-duration: .25s;
@@ -534,7 +534,7 @@ button:hover {
       width: 100%; }
     .tab__content .content-wrapper-signup .custom-input {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       text-align: center;
       width: 100%; }
@@ -599,6 +599,7 @@ form {
 
 .custom-input {
   display: flex;
+  justify-content: space-between;
   padding-bottom: 15px;
   width: 100%; }
 
@@ -621,6 +622,24 @@ input {
   width: 98% !important;
   height: 50px;
   padding: 15px; }
+
+input:focus {
+  background: #CFD8DC; }
+
+input:hover {
+  background: #CFD8DC; }
+
+.checkbox {
+  padding-left: 20px; }
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+  position: absolute;
+  margin-left: -75px; }
+
+.forgot-pass {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
 
