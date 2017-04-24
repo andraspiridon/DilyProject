@@ -9,14 +9,12 @@
 body {
   width: 100%;
   height: 100%;
-
+  overflow: hidden; }
 
 input {
   box-shadow: none;
   outline: none;
-  border: 1px solid #fafafa; 
-}
-
+  border: 1px solid #fafafa; }
 
 .main-container {
   height: 100vh;
@@ -48,9 +46,10 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #CDDC39;
-  transition: width .3s;
-  -webkit-transition: width .3s; }
+  background-color: #00897B;
+  -webkit-transition: width .3s;
+  -moz-transition: width .3s;
+  transition: width .3s; }
   .left-container .left-inside {
     width: 100%;
     display: flex;
@@ -99,12 +98,8 @@ input {
     padding-top: 10px; }
   .left-container .action-list {
     width: 60%;
-    display: flex;
-    align-items: center;
     margin-top: 20px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column; }
+    list-style-type: none; }
     .left-container .action-list li {
       width: 50%;
       display: flex;
@@ -125,6 +120,15 @@ input {
   .left-container.hide {
     display: none; }
 
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background: url("images/profile.jpg");
+  background-position: center;
+  background-size: 150px auto;
+  background-repeat: no-repeat; }
+
 .right-container {
   width: 80%;
   height: 100%;
@@ -144,7 +148,7 @@ input {
         cursor: pointer; }
     .right-container header .custom-notification .counter {
       position: absolute;
-      background-color: #CDDC39;
+      background-color: #00897B;
       border-radius: 12px;
       padding: 1px 5px;
       font-size: 10px;
@@ -169,7 +173,7 @@ input {
         height: 35px;
         justify-content: center;
         align-items: center;
-        background-color: #CDDC39;
+        background-color: #00897B;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px; }
       .right-container header .custom-notification .notification-dropdown .notification-counter {
@@ -183,7 +187,7 @@ input {
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 10px solid #CDDC39;
+        border-bottom: 10px solid #00897B;
         position: absolute;
         top: -10px;
         right: 22px; }
@@ -200,7 +204,7 @@ input {
     .right-container header .logo h1 {
       font-size: 20px;
       font-weight: 100;
-      color: #CDDC39; }
+      color: #00897B; }
     .right-container header .search-input {
       display: none;
       width: 88%;
@@ -215,5 +219,30 @@ input {
         display: block; }
   .right-container.expand {
     width: 95%; }
+
+@media (max-width: 1024px) {
+  .left-container {
+    width: 5%; }
+    .left-container.shrink {
+      width: 100%;
+      transition: width .3s;
+      -webkit-transition: width .3s; }
+
+  .right-container {
+    width: 95%; }
+    .right-container.expand {
+      display: none !important; }
+
+  .left-inside {
+    display: none !important; }
+    .left-inside.hide {
+      display: flex !important; }
+
+  .hided-inside {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center; }
+    .hided-inside.show {
+      display: none !important; } }
 
 /*# sourceMappingURL=timeline.css.map */
