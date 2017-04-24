@@ -3,7 +3,7 @@
   background-color: #EEEEEE;
   height: 200px;
   margin: 15px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 4px rgba(0, 0, 0, 0.23);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -47,6 +47,52 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  padding: 10px; }
+  padding: 10px;
+  width: 70%; }
+
+.tile-container .tile-row:nth-child(1) .tile:nth-child(2) .profile-picture {
+  background: url("images/profile1.jpg");
+  background-position: center;
+  background-size: 100px auto; }
+.tile-container .tile-row:nth-child(1) .tile:nth-child(3) .profile-picture {
+  background: url("images/profile2.jpg");
+  background-position: center;
+  background-size: 100px auto; }
+.tile-container .tile-row:nth-child(2) .tile:nth-child(1) .profile-picture {
+  background: url("images/profile3.jpg");
+  background-position: center;
+  background-size: 80px auto; }
+.tile-container .tile-row:nth-child(2) .tile:nth-child(2) .profile-picture {
+  background: url("images/profile4.jpg");
+  background-position: center;
+  background-size: 120px auto; }
+.tile-container .tile-row:nth-child(2) .tile:nth-child(3) .profile-picture {
+  background: url("images/profile5.jpg");
+  background-position: center;
+  background-size: 100px auto; }
+.tile-container .tile-row:nth-child(3) .tile:nth-child(1) .profile-picture {
+  background: url("images/profile6.jpg");
+  background-position: center;
+  background-size: 100px auto; }
+.tile-container .tile-row:nth-child(3) .tile:nth-child(2) .profile-picture {
+  background: url("images/profile7.jpg");
+  background-position: center;
+  background-size: 150px auto; }
+.tile-container .tile-row:nth-child(3) .tile:nth-child(3) .profile-picture {
+  background: url("images/profile8.jpg");
+  background-position: center;
+  background-size: 100px auto; }
+.tile-container .tile-row:nth-child(4) .tile:nth-child(1) .profile-picture {
+  background: url("images/profile9.jpg");
+  background-position: center;
+  background-size: 100px auto; }
+.tile-container .tile-row:nth-child(4) .tile:nth-child(2) .profile-picture {
+  background: url("images/profile10.jpg");
+  background-position: center;
+  background-size: 100px auto; }
+.tile-container .tile-row:nth-child(4) .tile:nth-child(3) .profile-picture {
+  background: url("images/profile11.jpg");
+  background-position: center;
+  background-size: 130px auto; }
 
 /*# sourceMappingURL=friends.css.map */
