@@ -48,7 +48,6 @@ body {
       position: absolute;
       top: 50%;
       left: 0;
-      transform: translateY(-50%);
       z-index: 2;
       width: 100%;
       max-height: 100%;
@@ -59,20 +58,13 @@ body {
       text-shadow: 0 0 1px #000;
       opacity: 0;
       overflow: auto;
-      transition: opacity 300ms;
-      -webkit-overflow-scrolling: touch; }
-      .products.gallery figure figcaption::-webkit-scrollbar {
-        width: 4px; }
-      .products.gallery figure figcaption::-webkit-scrollbar-track {
-        background: transparent; }
-      .products.gallery figure figcaption::-webkit-scrollbar-thumb {
-        background: #bbb; }
-      .products.gallery figure figcaption::-webkit-scrollbar-thumb:hover {
-        background: #999; }
-    .products.gallery figure:hover::after {
-      background: rgba(0, 0, 0, 0.8); }
-    .products.gallery figure:hover figcaption {
-      opacity: 1; }
+      transition: opacity 500ms; }
+    .products.gallery figure:hover {
+      cursor: pointer; }
+      .products.gallery figure:hover:after {
+        background: rgba(0, 0, 0, 0.8); }
+      .products.gallery figure:hover figcaption {
+        opacity: 1; }
 
 /* ----- LIST VIEW ----- */
 .products.list {

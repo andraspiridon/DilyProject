@@ -51,9 +51,10 @@ body {
       height: auto;
     }
     figcaption {
+      
       position: absolute;
-      top: 50%; left: 0;
-      transform: translateY(-50%);
+      top: 50%; 
+      left: 0;
       z-index: 2;
       width: 100%;
       max-height: 100%;
@@ -64,20 +65,22 @@ body {
       text-shadow: 0 0 1px #000;
       opacity: 0;
       overflow: auto;
-      transition: opacity 300ms;
-      -webkit-overflow-scrolling: touch;
-      &::-webkit-scrollbar { width: 4px; }
-      &::-webkit-scrollbar-track { background: transparent; }
-      &::-webkit-scrollbar-thumb { background: #bbb; }
-      &::-webkit-scrollbar-thumb:hover { background: #999; }
+      transition: opacity 500ms;
+     
     }
     &:hover {
-      &::after { background: rgba(0, 0, 0, 0.8); }
-      figcaption { opacity: 1; }
+      cursor: pointer;
+      &:after {
+         background: rgba(0, 0, 0, 0.8);
+     }
+      figcaption { opacity: 1;}
     }
   }
 }
 
+@media(max-width:1024px){
+  
+}
 
 /* ----- LIST VIEW ----- */
 .products.list {

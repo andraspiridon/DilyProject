@@ -59,24 +59,32 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px 10px;
     background-color: $main-color;
     -webkit-transition: width .3s;
     -moz-transition: width .3s;
     transition: width .3s;
 
     .left-inside {
+        min-height: 420px;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        padding-top:20px;
         i {
-            color: #34495e;
+            color: #B2DFDB;
             margin-right: 5px;
+        }
+        .profile-picture{
+            min-height: 150px;
         }
 
         &.hide {
             display: none;
+        }
+        .action-list{
+            width: 170px;
         }
     }
 
@@ -84,8 +92,10 @@ input {
         display: none;
 
         .profile-picture {
-            width: 35px;
+            width:35px;
             height: 35px;
+            min-width: 35px;
+            min-height: 35px;
             background-size: 35px auto;
         }
 
@@ -147,7 +157,10 @@ input {
     }
 
     .action-list {
-        width: 60%;
+        //width: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 20px;
         list-style-type: none;
 
@@ -162,8 +175,14 @@ input {
             }
 
             a {
-                width: calc("50%-25px");
+                width: calc(100% - 25px);
                 text-align: left;
+                text-decoration: none;
+            }
+            &.active{
+                a,i{
+                    color:#E2E68A;
+                }
             }
         }
     }
